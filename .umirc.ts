@@ -1,4 +1,3 @@
-import React from 'react';
 import { defineConfig } from 'umi';
 import { layout } from './src/config/config';
 export default defineConfig({
@@ -10,20 +9,28 @@ export default defineConfig({
   },
   layout: layout,
   routes: [
-    // { path: '/', component: '@/pages/index' },
     { path: '/', redirect: '/dashboard' },
     {
       path: '/dashboard',
       name: '工具',
       icon: 'tool',
       component: '@/pages/Dashboard/Dashboard',
+      key: 'dashboard',
+    },
+    {
+      path: '/mock',
+      name: 'mock',
+      icon: 'api',
+      component: '@/pages/mock/index',
+      key: 'mock',
     },
     {
       path: '/zz',
-      name: 'zz专属',
+      // name: 'zz专属',
       icon: 'tool',
       component: '@/pages/zz/index',
     },
   ],
+  history: { type: 'browser' },
   fastRefresh: {},
 });

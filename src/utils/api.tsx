@@ -15,6 +15,9 @@ export const TOOLS_API: any = {
   AIGCRecharge: '/AIGCRecharge',
   AddTeacher: '/addTeacher',
   CustomHandler: '/customHandler',
+  upsertMock: '/mock/upsertMock',
+  mockList: '/mock/list',
+  updateStatus: '/mock/updateStatus',
 };
 
 export const ORDER_API = {

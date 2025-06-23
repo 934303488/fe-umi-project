@@ -26,8 +26,10 @@ const CustomMessageHandler: React.FC = () => {
             rules={[{ required: true, message: '请输入tocpic' }]}
           >
             <Select placeholder="请输入tocpic" allowClear showSearch>
-              {topic.map((item) => (
-                <Option value={item}>{item}</Option>
+              {topic.map((item, index) => (
+                <Option key={index} value={item}>
+                  {item}
+                </Option>
               ))}
             </Select>
           </Form.Item>
